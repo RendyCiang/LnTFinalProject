@@ -103,7 +103,7 @@
                                 @method('delete')
                                 <button class="btn btn-danger" type="submit">Delete</button>
                             </form>
-                        {{-- @else --}}
+                        @else
                         <form action="/add-to-cart/{{ $data->id }}" method="POST">
                             @csrf
                             <a href="/add-order/{{ $data->id }}"><button class="btn btn-warning">Add To Cart</button></a>
