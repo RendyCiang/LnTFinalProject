@@ -2,7 +2,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
+
 nav ul li {
     display: inline;
     margin-right: 20px;
@@ -12,8 +14,7 @@ nav ul li a {
     color: rgb(21, 20, 20);
 }
 .navbar-nav .bi-cart {
-    font-size: 1.5rem; /* Adjust the size as needed */
-    margin-left: 5px; /* Add some space between the text and the icon */
+    margin-left: 10rem; /* Add some space between the text and the icon */
 }
 
 

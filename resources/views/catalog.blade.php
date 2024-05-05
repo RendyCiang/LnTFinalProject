@@ -12,13 +12,13 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <h2>ChipiChapa</h2>
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Catalog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#catalogue">Catalog</a></li>
         </ul>
         @auth
             <div class="dropdown ml-auto">
-               <a href=""><i class="bi bi-cart"></i><a>
+                    <a href="/cart" style="padding: 5px;"><i class="bi bi-cart" style="font-size: 1.3rem"></i><a>
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      Hi, {{ auth()->user()->nama_lengkap }} 
                 </button>
@@ -39,8 +39,8 @@
     </nav>
     
     
-    {{-- About Us --}}
-    <div class="home">
+    {{-- Home --}}
+    <div class="home" id="home">
         <div class="tagline">
             <h1>We provide everything you need and more,</h1>
             <h3>your one-stop solution for all your needs.</h3>
@@ -48,7 +48,8 @@
         </div>
     </div>
 
-    <div class="about">
+    {{-- About Us --}}
+    <div class="about" id="about">
         <div class="slider-container">
             <div class="slider">
                 <div class="slide">
@@ -86,35 +87,23 @@
     </div>
 
     {{-- Catalog --}}
-    <div class="catalog">
+    <div class="catalog" id="catalogue">
         <h2>Catalog</h2>
         <div class="product">
-                @forelse($CatalogueData as $data)
-                    <div class="product-item">
-                        <img src="{{ asset($data->Photo) }}">
-                        <h3>Category: {{ $data->kategori }}</h3>
-                        <h3>Product Name: {{ $data->nama_barang }}</h3>
-                        <h3>Price: Rp{{ $data->harga }}</h3>
-                        <h3>Stock: {{ $data->stok }}</h3>
-                        @if (Auth::user() && Auth::user()->role == 'admin')
-                            <a href="/edit-catalogue/{{ $data->id }}" class="btn btn-success">Edit</a>
-                            <form action="/delete-catalogue/{{ $data->id }}" method="POST">
-                                @csrf
-                                @method('delete')
-                                <button class="btn btn-danger" type="submit">Delete</button>
-                            </form>
-                        @else
-                        <form action="/add-to-cart/{{ $data->id }}" method="POST">
-                            @csrf
-                            <a href="/add-order/{{ $data->id }}"><button class="btn btn-warning">Add To Cart</button></a>
-                        </form>                        
-                        @endif
-                    </div>
-                @empty
-                <div class="text-center">
-                    <p>No products available.</p>
-                </div>
-                @endforelse
+            @foreach($catalogueData as $data)
+            <div class="product-item">
+                <img src="{{ asset($data->Photo) }}">
+                <h3>Category: {{ $data->kategori }}</h3>
+                <h3>Product Name: {{ $data->nama_barang }}</h3>
+                <h3>Price: Rp{{ $data->harga }}</h3>
+                <h3>Stock: {{ $data->stok }}</h3>
+                <form action="{{ route('addToCart', $data->id) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-warning">Add To Cart</button>
+                </form>
+            </div>
+        @endforeach
+        
         </div>
     </div>
     

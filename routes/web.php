@@ -46,3 +46,15 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/orders', [OrderController::class, 'index'])->name('orders');
 
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/catalog', [OrderController::class, 'index'])->name('catalog');
+Route::post('/addToCart/{id}', [OrderController::class, 'addToCart'])->name('addToCart');
+Route::post('/updateQuantity/{id}', [OrderController::class, 'updateQuantity']);
+Route::delete('/removeItem/{id}', [OrderController::class, 'removeItem'])->name('removeItem');
+
+
+
+
