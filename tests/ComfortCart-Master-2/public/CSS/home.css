@@ -1,0 +1,439 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f9f1e9;
+}
+
+.catalog {
+  width: 1759px;
+  height: 752px;
+  background-color: #f9f1e9;
+  margin: auto;
+  padding-top: 75px;
+}
+
+.catalog-1 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.produk {
+  font-size: 20px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-item img {
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+}
+
+.original-price {
+    margin-right: 10px;
+}
+
+.aa {
+  display: flex;
+  flex-direction: row;
+}
+
+.diskon {
+  color: red;
+}
+
+.eclipse {
+  margin-top: 10px;
+}
+
+.merk {
+  display: flex;
+  flex-direction: row;
+  gap: 245px;
+  padding-top: 20px;
+}
+
+.eclipse {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 360px;
+}
+
+.catalog22 {
+  width: 1759px;
+  height: 752px;
+  background-color: #f9f1e9;
+  margin: auto;
+  margin-top: 100px;
+
+}
+
+.catalog-2323 {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price-22 {
+  display: flex;
+  flex-direction: row;
+  font-size: 28px;
+  gap: 300px;
+}
+
+.bb {
+  display: flex;
+  flex-direction: row;
+}
+
+.merk {
+  gap: 250px;
+}
+
+.catalasto {
+  width: 1759px;
+  height: 752px;
+  background-color: #f9f1e9;
+  margin: auto;
+  margin-top: 20px;
+}
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*! preset */
+@font-face {
+  font-family: "noto_serif";
+  src: url(font/Noto_Serif/static/NotoSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: "noto_serif_lighter";
+  src: url(font/Noto_Serif/static/NotoSerif-Light.ttf);
+}
+
+:root {
+  --cokelat: #392a2a;
+  --banana: #ffd5a5;
+  --cream: #f9f1e9;
+}
+
+/*! Utility Class  */
+.flx-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flx-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*? General styling  */
+body {
+  font-family: "noto_serif";
+  scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+  color: var(--cokelat);
+  background: var(--cream);
+}
+
+main {
+  gap: 6rem;
+  padding: 4rem 0;
+}
+
+.graphic1 {
+  position: absolute;
+  width: 425px;
+  z-index: -2;
+  left: 0;
+  right: 80rem;
+  top: 9rem;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.graphic2 {
+  position: absolute;
+  width: 425px;
+  /* height: 441px; */
+  z-index: -2;
+  /* left: 80rem; */
+  right: 0;
+  top: 16rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-nav {
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.nav-item {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.main-nav ul {
+  gap: 2rem;
+}
+
+.main-nav ul li {
+  cursor: pointer;
+}
+
+.main-nav ul li:hover {
+  color: var(--cokelat);
+  font-weight: bolder;
+}
+
+.main-nav img {
+  max-width: 2rem;
+}
+
+.main-nav :first-child {
+  justify-content: start;
+}
+
+.main-nav :last-child {
+  justify-content: end;
+}
+
+.motto h1 {
+  font-family: "noto_serif_lighter";
+  font-size: 6rem;
+  font-weight: lighter;
+}
+
+.motto {
+  gap: 6rem;
+}
+
+.kategori {
+  max-width: 90vw;
+  min-width: 90vw;
+  gap: 1rem;
+  min-height: 10rem;
+}
+
+.kategori div {
+  width: 100%;
+  /* gap: 1rem; */
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.kategori div button {
+  font-size: 2.5rem;
+  flex-basis: 0;
+  flex-grow: 1;
+  background: transparent;
+  border: 3px solid var(--cokelat);
+  border-radius: 0.4rem;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.kategori div button:hover {
+  background: var(--cokelat);
+  color: var(--cream);
+}
+
+.gender {
+  gap: 2rem;
+}
+
+.list-kategori {
+  border: 3px solid var(--cokelat);
+  border-radius: 0.4rem;
+  /* width: 100%; */
+}
+
+.list-kategori ul {
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.list-kategori ul li {
+  cursor: pointer;
+}
+
+.list-kategori ul li:hover {
+  color: var(--cokelat);
+  font-weight: bolder;
+}
+/*!Footer  */
+.footer {
+    background: #392a2a;
+    color: #f9f1e9;
+    text-decoration: none;
+    list-style: none;
+    font-family: "noto_serif";
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 6rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px; /* Tambahkan padding agar konten footer tidak menyentuh tepi */
+  }
+
+  .footer-content h4 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .footer-content li {
+    margin-bottom: 16px;
+  }
+
+  .icon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer-content li a {
+    display: block;
+    color: #d6d6d6;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.4s ease;
+  }
+
+  .footer-content li a:hover {
+    transform: translateY(-3px) translateX(-5px);
+    color: #fff;
+  }
+
+  .footer-content p {
+    color: #d6d6d6;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 20px 0;
+  }
+
+  .icons a {
+    display: inline-block;
+    font-size: 22px;
+    color: #d6d6d6;
+    margin-right: 17px;
+    transition: all 0.4s ease;
+  }
+
+  .icons a:hover {
+    color: #fff;
+    transform: translateY(-5px);
+  }
+
+  @media (max-width: 1690px) {
+    .footer {
+      padding: 20px 5% 20px;
+    }
+  }
+
+  @media (max-width: 1120px) {
+    .footer {
+      grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .footer {
+      grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+      gap: 2.5rem;
+    }
+  }
