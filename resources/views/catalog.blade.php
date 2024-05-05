@@ -97,10 +97,19 @@
                 <h3>Product Name: {{ $data->nama_barang }}</h3>
                 <h3>Price: Rp{{ $data->harga }}</h3>
                 <h3>Stock: {{ $data->stok }}</h3>
-                <form action="{{ route('addToCart', $data->id) }}" method="POST">
+                @if (Auth::user() && Auth::user()->role == 'admin')
+                    <a href="/edit-catalogue/{{ $data->id }}" class="btn btn-success">Edit</a>
+                    <form action="/delete-catalogue/{{ $data->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                    </form>
+                @elseif (Auth::user() && Auth::user()->role == 'user')
+                <form action="/addToCart/{{$data->id}}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn-warning">Add To Cart</button>
                 </form>
+                @endif
             </div>
         @endforeach
         

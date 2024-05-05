@@ -18,7 +18,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10px; /* Adjust the margin as needed */
+    margin-left: 10px; 
 }
 
 nav ul li a:hover {

@@ -12,41 +12,6 @@ class AddCatalogueController extends Controller
     {
         return view('add_catalogue');
     }
-
-    // public function index2()
-    // {
-    //     $CatalogueData = AddCatalogue::all();
-    //     return view('cart', compact('CatalogueData'));
-    // }
-
-    // public function AddToCart($id)
-    // {
-    //     $CatalogueData = AddCatalogue::findOrFail($id);
-    //     $cart = session()->get('cart');
-
-    //     if(isset($cart[$id])){
-    //         $cart[$id]['quantity']++;
-    //     }   
-    //     else{
-    //         $cart[$id] = [
-    //             'nama_barang' => $CatalogueData->nama_barang,
-    //             'quantity' => 1,
-    //             'harga' => $CatalogueData->harga,
-    //             'Photo' => $CatalogueData->Photo
-    //         ];   
-    //     }   
-    //     session()->put('cart', $cart);
-    //     return redirect()->back()->with('success', 'Product added to cart successfully!');
-    // }
-
-    // public function updateCart(Request $request){
-    //     if($request->id and $request->quantity){
-    //         $cart = session()->get('cart');
-    //         $cart[$request->id]['quantity'] = $request->quantity;
-    //         session()->put('cart', $cart);
-    //         session()->flash('success', 'Cart updated successfully');
-    //     }
-    // }
     
     function StoreCatalogue(Request $request){
         $request->validate([

@@ -50,10 +50,11 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-Route::get('/catalog', [OrderController::class, 'index'])->name('catalog');
-Route::post('/addToCart/{id}', [OrderController::class, 'addToCart'])->name('addToCart');
+Route::get('/catalog', [OrderController::class, 'index']);
+Route::post('/addToCart/{id}', [OrderController::class, 'addToCart']);
 Route::post('/updateQuantity/{id}', [OrderController::class, 'updateQuantity']);
-Route::delete('/removeItem/{id}', [OrderController::class, 'removeItem'])->name('removeItem');
+Route::delete('/removeItem/{id}', [OrderController::class, 'removeItem']);
+
 
 
 

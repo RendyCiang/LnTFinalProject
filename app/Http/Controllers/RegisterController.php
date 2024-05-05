@@ -15,8 +15,8 @@ class RegisterController extends Controller
         $request->validate([
             'nama_lengkap' => ['required', 'min:3', 'max:40'],
             'email' => ['required', 'ends_with:@gmail.com'],
-            'password' => ['required', 'min:6','max:12'],
-            'Phone' => ['required', 'starts_with:08', 'min:9', 'max:12'],
+            'password' => ['required', 'min:6','max:12','max:12','regex:/[a-z]/', 'regex:/[A-Z]/', 'regex:/[0-9]/', 'regex:/[@$!%*#?&]/'],
+            'Phone' => ['required', 'starts_with:08', 'min:9'],
             'admin_id' => ['required_if:role,admin']
         ]);
 

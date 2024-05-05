@@ -63,9 +63,9 @@ input {
 
 button {
     font-size: 15px;
-    border: 1px solid rgb(4, 4, 4); /* White border */
+    border: 1px solid rgb(4, 4, 4); 
     border-radius: 20px;
-    background-color: transparent; /* Transparent background */
+    background-color: transparent; 
     padding: 20px 50px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }

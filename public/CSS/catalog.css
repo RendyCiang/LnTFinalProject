@@ -13,9 +13,7 @@ nav ul li a {
     text-decoration: none;
     color: rgb(21, 20, 20);
 }
-.navbar-nav .bi-cart {
-    margin-left: 10rem; /* Add some space between the text and the icon */
-}
+
 
 
 nav ul li a:hover {
@@ -60,17 +58,17 @@ nav {
 
 /* About Us */
 .home {
-    background-color: #f8f9fa; /* Light gray background color */
+    background-color: #f8f9fa; 
     text-align: center;
     padding-top: 52.2rem;
 }
 
 .tagline {
-    position: absolute; /* Position absolute for centering */
-    top: 50%; /* Move the element 50% down from the top */
-    left: 50%; /* Move the element 50% from the left */
-    transform: translate(-50%, -50%); /* Center the element */
-    text-align: center; /* Center-align text */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
 }
 .home h1 {
     font-size: 36px; 
@@ -92,7 +90,7 @@ nav {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 56rem; /* Set the height of the slider */
+    height: 56rem; 
 }
 
 .slider {
@@ -109,7 +107,7 @@ nav {
 }
 .slider .slide ul {
     list-style-type: none;
-    padding-left: 0; /* Remove default padding */
+    padding-left: 0; 
 }
 
 .slider .slide ul li {
@@ -147,7 +145,7 @@ nav {
 }
 
 /* Catalogue */
-/* Custom CSS for product grid */
+
 .catalog h2{
     text-align: center;
     margin-bottom: 20px;
